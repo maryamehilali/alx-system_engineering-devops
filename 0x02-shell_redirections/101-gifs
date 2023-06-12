@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -regex "*.gif" | rev | cut -d. -f 2 | rev |sort -f
