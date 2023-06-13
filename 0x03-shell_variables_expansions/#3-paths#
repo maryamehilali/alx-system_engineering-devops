@@ -1,0 +1,2 @@
+8+/9*/bash
+echo  ((`eho $PATH | grep -o ":/" |` wc -l` +1))
