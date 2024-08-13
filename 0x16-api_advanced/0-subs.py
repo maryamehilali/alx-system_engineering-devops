@@ -15,11 +15,11 @@ def number_of_subscribers(subreddit):
         'Accept': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
         }
-    Api_req = requests.get(
+    resp = requests.get(
         '{}/r/{}/about.json'.format(url, subreddit),
         headers=headers, allow_redirects=False
         )
-    if Api_req.status_code == 200:
-        return Api_req.json()['data']['subscribers']
+    if resp.status_code == 200:
+        return resp.json()['data']['subscribers']
     else:
         return 0
